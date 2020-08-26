@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Subtitle to Transcript convertor</title>
+<script language = "JavaScript">
+function TryClear(){
+var str = document.all.TextFields.Input.value; 
+var res = str.replace(/\n/g, " ");
+res = res.replace(/[0-9]+ [0-9\:\,]+ \-\-\> [0-9\:\,]+ /g, "");
+for(i=0; i<3; i++) {
+	res = res.replace(/  /g," ")
+}
+document.all.TextFields.Output.value = res;
+return;
+}
+</script>
+</head>
+<body>
+    <h1>Convert Closed Captions from ".srt" file to Transcripts</h1>
+    <a href="https://publish.illinois.edu/atlas-tlt/" target="_blank"><img src="https://pbs.twimg.com/profile_images/1034141846514151424/chPmFLtR_400x400.jpg" height="300" width="300" style="float:left"/>  </a>  
+    <a href="https://illinois.edu/" target="_blank"><img src="https://news.illinois.edu/files/6367/543635/116641.jpg" height="300" width="450" style="float:center"/><br/>  </a>
+    Open the ".srt" file in Notepad, gedit or your favorite text editor and paste its contents into the field below. Then click on "Convert to a transcript" to watch the magic happen right before your eyes!<br>
+    <form name="TextFields">
+<TEXTAREA type="text" cols="120" rows="10" name="Input" value="" ></TEXTAREA>
+<br>
+<input type="button" value="Convert to a transcript" onClick="TryClear();"></input>
+<br>
+<TEXTAREA type="text" cols="120" rows="10" name="Output" value="" ></TEXTAREA>
+</form>
+    <p>Note that this convertor will not work if the subtitle file you have is not an srt file (examples include dxfp, ssa, ttml files). If your subtitle file is not srt, please use <a href="https://gotranscript.com/subtitle-converter" target="_blank">this link to convert the file into an srt file</a>.</p>
+    <p>This site was created by @ostrich893</p>
+    <p>Please report any bugs/feedback to ksingh15@illinois.edu</p>
+<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101262800);</script>
+<script async src="//static.getclicky.com/js"></script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101262800ns.gif" /></p></noscript>
+</body>
+</html>
